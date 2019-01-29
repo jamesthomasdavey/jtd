@@ -22,7 +22,7 @@ class Navigation extends Component {
     return (
       <Fragment>
         <Backdrop open={this.state.open} closeNav={this.closeNav} />
-        <nav className={classes.wrapper}>
+        <nav className={[classes.wrapper, this.state.open ? classes.open : ''].join(' ')}>
           <Burger open={this.state.open} toggleNav={this.toggleNav} />
           <div className={classes.spacer1} />
           <Menu />
