@@ -8,7 +8,7 @@ const Backdrop = props => {
   return (
     <div
       className={[classes.wrapper, props.open ? classes.open : ''].join(' ')}
-      onClick={props.closeNav}
+      onClick={() => props.closeNav(() => null)}
     />
   );
 };
