@@ -1,0 +1,12 @@
+.wrapper {
+  grid-area: m;
+  position: relative;
+  align-self: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    min-width: 260px;
+  }
+}
