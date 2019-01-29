@@ -20,6 +20,7 @@
   color: var(--black);
   letter-spacing: 4px;
   font-size: 18px;
+  user-select: none;
 }
 
 @media (max-width: 374px) {
