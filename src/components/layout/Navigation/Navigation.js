@@ -15,8 +15,8 @@ class Navigation extends Component {
   toggleNav = () => {
     this.setState({ open: !this.state.open });
   };
-  closeNav = () => {
-    this.setState({ open: false });
+  closeNav = cb => {
+    this.setState({ open: false }, cb);
   };
   render() {
     return (
@@ -25,7 +25,7 @@ class Navigation extends Component {
         <nav className={[classes.wrapper, this.state.open ? classes.open : ''].join(' ')}>
           <Burger open={this.state.open} toggleNav={this.toggleNav} />
           <div className={classes.spacer1} />
-          <Menu />
+          <Menu closeNav={this.closeNav} />
           <div className={classes.spacer2} />
         </nav>
       </Fragment>

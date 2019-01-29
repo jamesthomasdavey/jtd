@@ -9,7 +9,9 @@
   left: 0;
   top: 0;
   z-index: 50;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: translateX(-260px);
   transform: translateX(-260px);
   background-color: var(--white);
 }
@@ -26,6 +28,7 @@
 
 .wrapper.open {
   width: 100%;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -49,7 +52,10 @@
   .wrapper {
     grid-template-rows: auto;
     grid-template-areas: 'm b';
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
   .spacer1,
   .spacer2 {
@@ -58,6 +64,7 @@
     display: none;
   }
   .wrapper.open {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     background: transparent;
   }

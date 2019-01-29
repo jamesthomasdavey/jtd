@@ -1,0 +1,57 @@
+.wrapper {
+  text-align: center;
+  font-family: var(--main-font-stack);
+  padding: 1.2rem;
+}
+
+.wrapper:hover {
+  cursor: pointer;
+}
+
+.small {
+  padding: 0.5rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  position: relative;
+  background: transparent;
+  color: var(--black);
+  z-index: 0;
+  padding: 5px 18px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.small > .text {
+  font-size: 0.9rem;
+}
+
+.text:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #d7e5ee;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.wrapper:hover > .text:before,
+.wrapper.active > .text:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}

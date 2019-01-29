@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // component
 import MenuItem from './components/MenuItem/MenuItem';
@@ -6,18 +7,34 @@ import MenuItem from './components/MenuItem/MenuItem';
 // css
 import classes from './Menu.module.css';
 
-const Menu = () => {
+const Menu = props => {
   return (
-    <div className={classes.wrapper}>
-      <MenuItem>Home</MenuItem>
-      <MenuItem>120 A</MenuItem>
-      <MenuItem>120 B</MenuItem>
-      <MenuItem>135</MenuItem>
+    <ul className={classes.wrapper}>
+      <MenuItem closeNav={props.closeNav} path="/">
+        Home
+      </MenuItem>
+      <MenuItem closeNav={props.closeNav} path="/120-a">
+        120 A
+      </MenuItem>
+      <MenuItem closeNav={props.closeNav} path="/120-b">
+        120 B
+      </MenuItem>
+      <MenuItem closeNav={props.closeNav} path="/135">
+        135
+      </MenuItem>
       <div className={classes.divider} />
-      <MenuItem small>Blog</MenuItem>
-      <MenuItem small>James</MenuItem>
-    </div>
+      <MenuItem small closeNav={props.closeNav} path="/blog">
+        Blog
+      </MenuItem>
+      <MenuItem small closeNav={props.closeNav} path="/james">
+        James
+      </MenuItem>
+    </ul>
   );
+};
+
+Menu.propTypes = {
+  closeNav: PropTypes.func.isRequired
 };
 
 export default Menu;
