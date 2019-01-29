@@ -1,0 +1,14 @@
+.wrapper {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  grid-template-areas: 's1' 'm' 's2';
+  left: 0;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  /* transform: translateX(-260px); */
+}

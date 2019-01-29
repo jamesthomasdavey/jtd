@@ -1,0 +1,19 @@
+.wrapper {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 49;
+}
+
+.wrapper.open {
+  display: block;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .wrapper.open {
+    opacity: 0.85;
+  }
+}
