@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 // components
 import Backdrop from './components/Backdrop/Backdrop';
@@ -25,12 +26,18 @@ class Navigation extends Component {
         <nav className={[classes.wrapper, this.state.open ? classes.open : ''].join(' ')}>
           <Burger open={this.state.open} toggleNav={this.toggleNav} />
           <div className={classes.spacer1} />
-          <Menu closeNav={this.closeNav} />
+          <Menu
+            closeNav={this.closeNav}
+            redirectTo={this.props.redirectTo}
+            pageTransitionHandler={this.props.pageTransitionHandler}
+          />
           <div className={classes.spacer2} />
         </nav>
       </Fragment>
     );
   }
 }
+
+Navigation.propTypes = {};
 
 export default Navigation;

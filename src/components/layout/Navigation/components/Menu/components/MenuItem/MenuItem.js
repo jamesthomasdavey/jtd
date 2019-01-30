@@ -9,9 +9,11 @@ class MenuItem extends Component {
   navLinkHander = () => {
     this.props.closeNav(() => {
       if (this.props.location.pathname !== this.props.path) {
-        setTimeout(() => {
-          this.props.history.push(this.props.path);
-        }, 300);
+        this.props.pageTransitionHandler(() => {
+          setTimeout(() => {
+            this.props.history.push(this.props.path);
+          }, 300);
+        });
       }
     });
   };
