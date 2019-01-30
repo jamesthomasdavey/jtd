@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-rows: 74px auto 40px;
+  grid-template-columns: 40px auto 40px;
+  grid-template-areas:
+    '. . .'
+    '. g .'
+    '. . .';
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    height: 100%;
+    grid-template-columns: 78px auto 78px;
+  }
+}

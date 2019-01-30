@@ -1,0 +1,9 @@
+{
+  "home": {
+    "grid1": [
+      "./images/home/grid1/home_grid1_01.jpg",
+      "./images/home/grid1/home_grid1_02.jpg",
+      "./images/home/grid1/home_grid1_03.jpg"
+    ]
+  }
+}
