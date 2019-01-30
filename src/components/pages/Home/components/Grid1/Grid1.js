@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageFadeIn from 'react-image-fade-in';
 
 import home_grid1_01 from '../../../../../data/images/home/grid1/home_grid1_01.jpg';
 import home_grid1_02 from '../../../../../data/images/home/grid1/home_grid1_02.jpg';
@@ -10,15 +11,27 @@ const Grid1 = () => {
   return (
     <div className={[classes.wrapper, 'photogrid'].join(' ')}>
       <div className={[classes.image1__wrapper, 'photogrid__image-wrapper'].join(' ')}>
-        <img src={home_grid1_01} className={[classes.image1, 'photogrid__image'].join(' ')} />
+        <ImageFadeIn
+          src={home_grid1_01}
+          className={[classes.image1, 'photogrid__image'].join(' ')}
+          opacityTransition={1}
+        />
         <div className="photogrid__image-cover" />
       </div>
       <div className={[classes.image2__wrapper, 'photogrid__image-wrapper'].join(' ')}>
-        <img src={home_grid1_02} className={[classes.image2, 'photogrid__image'].join(' ')} />
+        <ImageFadeIn
+          src={home_grid1_02}
+          className={[classes.image2, 'photogrid__image'].join(' ')}
+          opacityTransition={1}
+        />
         <div className="photogrid__image-cover" />
       </div>
       <div className={[classes.image3__wrapper, 'photogrid__image-wrapper'].join(' ')}>
-        <img src={home_grid1_03} className={[classes.image3, 'photogrid__image'].join(' ')} />
+        <ImageFadeIn
+          src={home_grid1_03}
+          className={[classes.image3, 'photogrid__image'].join(' ')}
+          opacityTransition={1}
+        />
         <div className="photogrid__image-cover" />
       </div>
     </div>
