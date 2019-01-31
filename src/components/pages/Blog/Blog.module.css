@@ -2,12 +2,24 @@
   width: 100%;
   position: absolute;
   display: grid;
-  grid-template-rows: 74px auto 40px;
+  opacity: 0;
+  grid-template-rows: 74px auto auto 40px;
   grid-template-columns: 32px auto 32px;
   grid-template-areas:
     '. . .'
     '. c .'
+    '. f .'
     '. . .';
+}
+
+.visible {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.transition {
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -16,3 +28,11 @@
   }
 }
 
+.footer {
+  grid-area: f;
+  display: flex;
+  justify-content: space-around;
+  justify-self: center;
+  width: 100%;
+  max-width: 768px;
+}

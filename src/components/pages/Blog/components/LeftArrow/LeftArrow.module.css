@@ -1,0 +1,47 @@
+.wrapper {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 70px;
+}
+
+.wrapper:hover {
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  background: #bbbbbb;
+  height: 3px;
+  width: 32px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.bar1 {
+  right: 50%;
+  top: 21px;
+  -webkit-transform: rotate(-56deg);
+  transform: rotate(-56deg);
+}
+
+.bar2 {
+  right: 50%;
+  top: 46px;
+  -webkit-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+
+.wrapper:hover > .bar {
+  background: var(--black);
+}
+
+.wrapper:disabled:hover {
+  cursor: auto;
+}
+
+.wrapper:disabled > .bar {
+  background: var(--light-grey);
+}
