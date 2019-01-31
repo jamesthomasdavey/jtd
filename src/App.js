@@ -9,6 +9,7 @@ import ContentWrapper from './components/layout/ContentWrapper/ContentWrapper';
 
 // pages components
 import Home from './components/pages/Home/Home';
+import Blog from './components/pages/Blog/Blog';
 
 // css
 import classes from './App.module.css';
@@ -35,6 +36,8 @@ class App extends Component {
             <ContentWrapper transitioning={this.state.transitioning}>
               <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/blog" component={Blog} />
+                <Route exact path="/blog/:page" component={Blog} />
               </Switch>
             </ContentWrapper>
           </div>

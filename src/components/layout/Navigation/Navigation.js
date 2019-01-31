@@ -26,11 +26,7 @@ class Navigation extends Component {
         <nav className={[classes.wrapper, this.state.open ? classes.open : ''].join(' ')}>
           <Burger open={this.state.open} toggleNav={this.toggleNav} />
           <div className={classes.spacer1} />
-          <Menu
-            closeNav={this.closeNav}
-            redirectTo={this.props.redirectTo}
-            pageTransitionHandler={this.props.pageTransitionHandler}
-          />
+          <Menu closeNav={this.closeNav} pageTransitionHandler={this.props.pageTransitionHandler} />
           <div className={classes.spacer2} />
         </nav>
       </Fragment>
@@ -38,6 +34,8 @@ class Navigation extends Component {
   }
 }
 
-Navigation.propTypes = {};
+Navigation.propTypes = {
+  pageTransitionHandler: PropTypes.func.isRequired
+};
 
 export default Navigation;
