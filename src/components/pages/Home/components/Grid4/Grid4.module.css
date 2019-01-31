@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 8fr 5fr;
+    grid-template-areas:
+      'i1 i2'
+      'i1 i3';
+  }
+
+  .image1__wrapper {
+    grid-area: i1;
+  }
+
+  .image1 {
+    width: 85%;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: start;
+  }
+
+  .image2__wrapper {
+    grid-area: i2;
+  }
+
+  .image2 {
+    width: 85%;
+    -ms-flex-item-align: start;
+    align-self: start;
+    justify-self: end;
+  }
+
+  .image3__wrapper {
+    grid-area: i3;
+  }
+
+  .image3 {
+    width: 85%;
+    -ms-flex-item-align: end;
+    align-self: end;
+    justify-self: start;
+  }
+}

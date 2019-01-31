@@ -4,10 +4,15 @@
   display: grid;
   grid-template-rows: 74px auto 40px;
   grid-template-columns: 40px auto 40px;
+  transition: opacity 0.3s ease;
   grid-template-areas:
     '. . .'
     '. g .'
     '. . .';
+}
+
+.transitioning {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
