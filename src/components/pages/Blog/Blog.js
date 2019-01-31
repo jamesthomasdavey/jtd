@@ -100,7 +100,6 @@ class Blog extends Component {
       blogPage = <BlogPage currentPosts={currentPosts} />;
     }
     if (!this.state.isLoading) {
-      console.log('hi');
       let disableLeftArrow = false;
       let disabledRightArrow = false;
       if (this.state.pageNumber === 1) {

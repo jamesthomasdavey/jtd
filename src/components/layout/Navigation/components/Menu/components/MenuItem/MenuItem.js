@@ -12,6 +12,7 @@ class MenuItem extends Component {
         this.props.pageTransitionHandler(() => {
           setTimeout(() => {
             this.props.history.push(this.props.path);
+            window.scrollTo(0, 0);
           }, 300);
         });
       }
