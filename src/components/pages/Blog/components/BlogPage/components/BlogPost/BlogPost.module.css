@@ -4,4 +4,74 @@
 
 .heading {
   margin: 1.5rem 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  display: block;
+  font-family: var(--main-font-stack);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 0;
+  }
+}
+
+.date {
+  display: block;
+  align-self: center;
+  font-family: var(--main-font-stack);
+}
+
+.content {
+  font-family: var(--secondary-font-stack);
+  line-height: 1.6rem;
+  text-align: justify;
+}
+
+.content > p {
+  margin: 1rem 0;
+}
+
+.content > ul {
+  list-style-type: none;
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.content > ul > li {
+  line-height: 1.6rem;
+}
+
+.divider {
+  width: 25%;
+  height: 3px;
+  background: var(--mid-grey);
+  margin: 0 auto;
+  animation: loadDivider 1s ease-out;
+}
+
+@keyframes loadDivider {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 25%;
+  }
 }

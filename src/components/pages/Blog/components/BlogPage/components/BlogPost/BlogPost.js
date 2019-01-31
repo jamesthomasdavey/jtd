@@ -30,7 +30,7 @@ const BlogPost = props => {
         </div>
         <div className={classes.content}>{renderHTML(props.post.body)}</div>
       </div>
-      {props.index < props.arrLength - 1 && <hr />}
+      {props.index < props.arrLength - 1 && <div className={classes.divider} />}
     </Fragment>
   );
 };
