@@ -16,6 +16,7 @@
     -ms-flex-item-align: center;
     align-self: center;
     justify-self: start;
+    user-select: none;
   }
 
   .image2__wrapper {
@@ -27,6 +28,7 @@
     -ms-flex-item-align: start;
     align-self: start;
     justify-self: end;
+    user-select: none;
   }
 
   .image3__wrapper {
@@ -38,5 +40,6 @@
     -ms-flex-item-align: end;
     align-self: end;
     justify-self: start;
+    user-select: none;
   }
 }

@@ -91,6 +91,7 @@ class Blog extends Component {
     });
   };
   render() {
+    document.title = 'James Thomas Davey | Blog';
     let blogPage;
     let blogFooter;
     if (!this.state.isLoading) {

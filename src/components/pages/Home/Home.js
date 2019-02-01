@@ -19,13 +19,22 @@ class Home extends Component {
     isTransitioning: false
   };
   componentDidMount = () => {
+    elapsed = 0;
+    this.mounted = true;
     this.autoAdvanceGrid();
+  };
+  componentWillUnmount = () => {
+    this.mounted = false;
   };
   autoAdvanceGrid = () => {
     setInterval(() => {
-      elapsed++;
-      if (elapsed >= waitTime) {
-        this.advanceGrid();
+      if (this.mounted) {
+        elapsed++;
+        if (elapsed >= waitTime) {
+          this.advanceGrid();
+        }
+      } else {
+        clearInterval();
       }
     }, 1000);
   };
@@ -37,14 +46,16 @@ class Home extends Component {
     }
   };
   changeGrid = index => {
-    elapsed = 0;
     this.setState({ isTransitioning: true }, () => {
       setTimeout(() => {
+        elapsed = 0;
+        window.scrollTo(0, 0);
         this.setState({ activeIndex: index, isTransitioning: false });
       }, 300);
     });
   };
   render() {
+    document.title = 'James Thomas Davey';
     return (
       <Fragment>
         <Sidebar

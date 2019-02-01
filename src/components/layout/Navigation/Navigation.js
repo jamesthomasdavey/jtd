@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import disableScroll from 'disable-scroll';
 
 // components
 import Backdrop from './components/Backdrop/Backdrop';
@@ -20,6 +21,11 @@ class Navigation extends Component {
     this.setState({ open: false }, cb);
   };
   render() {
+    if (this.state.open) {
+      disableScroll.on();
+    } else {
+      disableScroll.off();
+    }
     return (
       <Fragment>
         <Backdrop open={this.state.open} closeNav={this.closeNav} />
