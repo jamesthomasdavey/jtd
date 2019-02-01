@@ -39,14 +39,14 @@ const Menu = props => {
         135
       </MenuItem>
       <div className={classes.divider} />
-      <MenuItem
+      {/* <MenuItem
         small
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}
         path="/blog"
       >
         Blog
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem
         small
         closeNav={props.closeNav}
