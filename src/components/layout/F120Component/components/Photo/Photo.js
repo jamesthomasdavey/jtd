@@ -15,7 +15,7 @@ const Photo = props => {
           )}
           src={props.src}
         />
-        <div className={classes.cover} />
+        <div className={classes.cover} onClick={() => props.openLightbox(props.index)} />
       </div>
     </Reveal>
   );
@@ -23,7 +23,9 @@ const Photo = props => {
 
 Photo.propTypes = {
   src: PropTypes.string.isRequired,
-  vertical: PropTypes.bool.isRequired
+  vertical: PropTypes.bool.isRequired,
+  index: PropTypes.number.isRequired,
+  openLightbox: PropTypes.func
 };
 
 Photo.defaultProps = {
