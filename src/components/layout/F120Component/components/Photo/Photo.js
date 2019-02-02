@@ -14,6 +14,7 @@ const Photo = props => {
             ' '
           )}
           src={props.src}
+          alt={`image_${props.index}`}
         />
         <div className={classes.cover} onClick={() => props.openLightbox(props.index)} />
       </div>

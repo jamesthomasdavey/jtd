@@ -5,13 +5,15 @@
   left: 0;
   top: 0;
   z-index: 150;
-  grid-template-rows: auto auto auto;
+  display: grid;
+  grid-template-rows: 70px auto 70px;
   grid-template-columns: 20px auto 20px;
   grid-template-areas:
     '. p .'
     '. i .'
     '. n .';
   opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -27,4 +29,15 @@
   background: black;
   opacity: 0.85;
   z-index: 151;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-rows: 72px auto 72px;
+    grid-template-columns: 70px auto 70px;
+    grid-template-areas:
+      '. . .'
+      'p i n'
+      '. . .';
+  }
 }

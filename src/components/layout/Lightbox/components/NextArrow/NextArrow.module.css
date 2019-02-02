@@ -1,0 +1,60 @@
+.wrapper {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 70px;
+  height: 70px;
+  transform: rotate(90deg);
+  transition: opacity 0.3s ease;
+  z-index: 155;
+  grid-area: n;
+  justify-self: center;
+}
+
+.bar {
+  position: absolute;
+  pointer-events: none;
+  background: #bbbbbb;
+  height: 3px;
+  width: 32px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper:hover {
+  cursor: pointer;
+}
+
+.wrapper:hover > .bar {
+  background: var(--white);
+}
+
+.wrapper:disabled {
+  opacity: 0;
+}
+
+.wrapper:disabled:hover {
+  cursor: default;
+}
+
+.bar1 {
+  left: 28%;
+  top: 21px;
+  -webkit-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+
+.bar2 {
+  left: 28%;
+  top: 46px;
+  -webkit-transform: rotate(-56deg);
+  transform: rotate(-56deg);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    transform: rotate(0deg);
+    align-self: center;
+  }
+}

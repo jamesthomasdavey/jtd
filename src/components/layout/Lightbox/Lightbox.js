@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import disableScroll from 'disable-scroll';
-import Reveal from 'react-reveal/Reveal';
+
+import Photo from './components/Photo/Photo';
+import PreviousArrow from './components/PreviousArrow/PreviousArrow';
+import NextArrow from './components/NextArrow/NextArrow';
 
 import classes from './Lightbox.module.css';
 
 class Lightbox extends Component {
   state = {
-    activeIndex: 0,
+    imageIndex: 0,
     isVisible: false
   };
   componentDidMount = () => {
-    this.setState({ isVisible: true });
+    this.setState({ isVisible: true, imageIndex: this.props.imageIndex });
   };
   componentWillUnmount = () => {
     disableScroll.off();
@@ -21,11 +24,26 @@ class Lightbox extends Component {
       setTimeout(this.props.closeLightbox, 300);
     });
   };
+  previousImageHandler = () => {
+    this.setState({ imageIndex: this.state.imageIndex - 1 });
+  };
+  nextImageHandler = () => {
+    this.setState({ imageIndex: this.state.imageIndex + 1 });
+  };
   render() {
     disableScroll.on();
     return (
       <div className={[classes.wrapper, this.state.isVisible ? classes.visible : ''].join(' ')}>
         <div className={classes.backdrop} onClick={this.closeLightbox} />
+        <PreviousArrow
+          previousImageHandler={this.previousImageHandler}
+          disabled={this.state.imageIndex === 0}
+        />
+        <Photo image={this.props.images[this.state.imageIndex]} index={this.state.imageIndex} />
+        <NextArrow
+          nextImageHandler={this.nextImageHandler}
+          disabled={this.state.imageIndex === this.props.images.length - 1}
+        />
       </div>
     );
   }
