@@ -11,7 +11,8 @@ import classes from './Lightbox.module.css';
 class Lightbox extends Component {
   state = {
     imageIndex: 0,
-    isVisible: false
+    isVisible: false,
+    isTransitioning: false
   };
   componentDidMount = () => {
     this.setState({ isVisible: true, imageIndex: this.props.imageIndex });
@@ -25,10 +26,22 @@ class Lightbox extends Component {
     });
   };
   previousImageHandler = () => {
-    this.setState({ imageIndex: this.state.imageIndex - 1 });
+    if (!this.state.isTransitioning) {
+      this.setState({ isTransitioning: true }, () => {
+        setTimeout(() => {
+          this.setState({ imageIndex: this.state.imageIndex - 1, isTransitioning: false });
+        }, 300);
+      });
+    }
   };
   nextImageHandler = () => {
-    this.setState({ imageIndex: this.state.imageIndex + 1 });
+    if (!this.state.isTransitioning) {
+      this.setState({ isTransitioning: true }, () => {
+        setTimeout(() => {
+          this.setState({ imageIndex: this.state.imageIndex + 1, isTransitioning: false });
+        }, 300);
+      });
+    }
   };
   render() {
     disableScroll.on();
@@ -39,7 +52,11 @@ class Lightbox extends Component {
           previousImageHandler={this.previousImageHandler}
           disabled={this.state.imageIndex === 0}
         />
-        <Photo image={this.props.images[this.state.imageIndex]} index={this.state.imageIndex} />
+        <Photo
+          isTransitioning={this.state.isTransitioning}
+          image={this.props.images[this.state.imageIndex]}
+          index={this.state.imageIndex}
+        />
         <NextArrow
           nextImageHandler={this.nextImageHandler}
           disabled={this.state.imageIndex === this.props.images.length - 1}

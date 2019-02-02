@@ -6,7 +6,13 @@ import classes from './Photo.module.css';
 
 const Photo = props => {
   return (
-    <div className={[classes.wrapper, props.image.vert ? classes.vert : ''].join(' ')}>
+    <div
+      className={[
+        classes.wrapper,
+        props.isTransitioning ? classes.invisible : '',
+        props.image.vert ? classes.vert : ''
+      ].join(' ')}
+    >
       <ImageFadeIn className={classes.image} src={props.image.src} alt={`image_${props.index}`} />
       <div className={classes.cover} />
     </div>
@@ -15,7 +21,8 @@ const Photo = props => {
 
 Photo.propTypes = {
   image: PropTypes.object.isRequired,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
+  isTransitioning: PropTypes.bool.isRequired
 };
 
 export default Photo;
