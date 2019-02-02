@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import disableScroll from 'disable-scroll';
 import Reveal from 'react-reveal/Reveal';
 
 import classes from './Lightbox.module.css';
 
-const Lightbox = props => {
-  if (props.display) {
-    disableScroll.on();
-  } else {
+class Lightbox extends Component {
+  state = {
+    activeIndex: 0,
+    isVisible: false
+  };
+  componentDidMount = () => {
+    this.setState({ isVisible: true });
+  };
+  componentWillUnmount = () => {
     disableScroll.off();
-  }
-  if (props.display) {
+  };
+  closeLightbox = () => {
+    this.setState({ isVisible: false }, () => {
+      setTimeout(this.props.closeLightbox, 300);
+    });
+  };
+  render() {
+    disableScroll.on();
     return (
-      <Reveal>
-        <div className={classes.wrapper}>
-          <div className={classes.backdrop} onClick={props.closeLightbox} />
-        </div>
-      </Reveal>
+      <div className={[classes.wrapper, this.state.isVisible ? classes.visible : ''].join(' ')}>
+        <div className={classes.backdrop} onClick={this.closeLightbox} />
+      </div>
     );
-  } else {
-    return null;
   }
-};
+}
 
 Lightbox.propTypes = {
-  display: PropTypes.bool.isRequired,
   imageIndex: PropTypes.number.isRequired,
   images: PropTypes.array.isRequired,
   closeLightbox: PropTypes.func.isRequired

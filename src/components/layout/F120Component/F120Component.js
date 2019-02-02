@@ -26,17 +26,22 @@ class F120Component extends Component {
         />
       );
     });
+    let lightbox;
+    if (this.state.lightboxIsOpen) {
+      lightbox = (
+        <Lightbox
+          imageIndex={this.state.imageIndex}
+          images={this.props.images}
+          closeLightbox={() => this.setState({ lightboxIsOpen: false })}
+        />
+      );
+    }
     return (
       <Fragment>
         <div className={classes.wrapper}>
           <div className={classes.container}>{photos}</div>
         </div>
-        <Lightbox
-          display={this.state.lightboxIsOpen}
-          imageIndex={this.state.imageIndex}
-          images={this.props.images}
-          closeLightbox={() => this.setState({ lightboxIsOpen: false })}
-        />
+        {lightbox}
       </Fragment>
     );
   }
