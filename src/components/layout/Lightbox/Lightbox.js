@@ -27,20 +27,28 @@ class Lightbox extends Component {
   };
   previousImageHandler = () => {
     if (!this.state.isTransitioning) {
-      this.setState({ isTransitioning: true }, () => {
-        setTimeout(() => {
-          this.setState({ imageIndex: this.state.imageIndex - 1, isTransitioning: false });
-        }, 300);
-      });
+      if (this.state.imageIndex !== 0) {
+        this.setState({ isTransitioning: true }, () => {
+          setTimeout(() => {
+            this.setState({ imageIndex: this.state.imageIndex - 1, isTransitioning: false });
+          }, 300);
+        });
+      } else {
+        this.closeLightbox();
+      }
     }
   };
   nextImageHandler = () => {
     if (!this.state.isTransitioning) {
-      this.setState({ isTransitioning: true }, () => {
-        setTimeout(() => {
-          this.setState({ imageIndex: this.state.imageIndex + 1, isTransitioning: false });
-        }, 300);
-      });
+      if (this.state.imageIndex !== this.props.images.length - 1) {
+        this.setState({ isTransitioning: true }, () => {
+          setTimeout(() => {
+            this.setState({ imageIndex: this.state.imageIndex + 1, isTransitioning: false });
+          }, 300);
+        });
+      } else {
+        this.closeLightbox();
+      }
     }
   };
   render() {
@@ -56,6 +64,7 @@ class Lightbox extends Component {
           isTransitioning={this.state.isTransitioning}
           image={this.props.images[this.state.imageIndex]}
           index={this.state.imageIndex}
+          nextImageHandler={this.nextImageHandler}
         />
         <NextArrow
           nextImageHandler={this.nextImageHandler}

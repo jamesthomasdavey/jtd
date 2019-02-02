@@ -12,6 +12,7 @@ const Photo = props => {
         props.isTransitioning ? classes.invisible : '',
         props.image.vert ? classes.vert : ''
       ].join(' ')}
+      onClick={props.nextImageHandler}
     >
       <ImageFadeIn className={classes.image} src={props.image.src} alt={`image_${props.index}`} />
       <div className={classes.cover} />
@@ -22,7 +23,8 @@ const Photo = props => {
 Photo.propTypes = {
   image: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
-  isTransitioning: PropTypes.bool.isRequired
+  isTransitioning: PropTypes.bool.isRequired,
+  nextImageHandler: PropTypes.func.isRequired
 };
 
 export default Photo;
