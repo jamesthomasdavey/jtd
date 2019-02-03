@@ -26,6 +26,7 @@
 
 .description > p {
   font-family: var(--secondary-font-stack);
+  color: var(--black);
   padding: 2rem 0;
   line-height: 1.5rem;
   text-align: justify;
@@ -75,6 +76,7 @@
   font-family: var(--main-font-stack);
   text-transform: uppercase;
   font-weight: 400;
+  color: var(--black);
   text-align: center;
   letter-spacing: 4px;
   font-size: 18px;
@@ -152,7 +154,7 @@
   font-family: var(--main-font-stack);
   position: relative;
   background: transparent;
-  color: #333;
+  color: var(--black);
   z-index: 0;
   padding: 2px 12px;
   -webkit-transition: all 0.3s ease-out;
