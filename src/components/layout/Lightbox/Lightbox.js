@@ -15,10 +15,27 @@ class Lightbox extends Component {
     isTransitioning: false
   };
   componentDidMount = () => {
+    document.addEventListener('keydown', this.advanceWithKeyDown);
     this.setState({ isVisible: true, imageIndex: this.props.imageIndex });
   };
   componentWillUnmount = () => {
+    document.removeEventListener('keydown', this.advanceWithKeyDown);
     disableScroll.off();
+  };
+  advanceWithKeyDown = e => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      this.previousImageHandler();
+    } else if (
+      e.key === 'ArrowRight' ||
+      e.key === 'ArrowDown' ||
+      e.key === 'Enter' ||
+      e.key === 'Tab' ||
+      e.key === ' '
+    ) {
+      this.nextImageHandler();
+    } else if (e.key === 'Escape') {
+      this.closeLightbox();
+    }
   };
   closeLightbox = () => {
     this.setState({ isVisible: false }, () => {
