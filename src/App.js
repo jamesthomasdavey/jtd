@@ -9,8 +9,9 @@ import ContentWrapper from './components/layout/ContentWrapper/ContentWrapper';
 
 // pages components
 import Home from './components/pages/Home/Home';
-import F_120_A from './components/pages/F_120_A/F_120_A';
-import F_120_B from './components/pages/F_120_B/F_120_B';
+import F120A from './components/pages/F120A/F120A';
+import F120B from './components/pages/F120B/F120B';
+import F135 from './components/pages/F135/F135';
 import Blog from './components/pages/Blog/Blog';
 
 // css
@@ -38,8 +39,9 @@ class App extends Component {
             <ContentWrapper transitioning={this.state.transitioning}>
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/120-a" component={F_120_A} />
-                <Route exact path="/120-b" component={F_120_B} />
+                <Route exact path="/120-a" component={F120A} />
+                <Route exact path="/120-b" component={F120B} />
+                <Route exact path="/135" component={F135} />
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/blog/:page" component={Blog} />
               </Switch>

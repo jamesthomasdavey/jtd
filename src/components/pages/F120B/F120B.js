@@ -58,6 +58,6 @@ const images = [
   { src: f_120_b_26, vert: true }
 ];
 
-const F_120_B = () => <F120Component images={images} />;
+const F120B = () => <F120Component images={images} />;
 
-export default F_120_B;
+export default F120B;

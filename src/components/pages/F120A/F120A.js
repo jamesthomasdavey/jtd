@@ -1,6 +1,6 @@
 import React from 'react';
 
-import F120Component from './../../layout/F120Component/F120Component';
+import F120Component from '../../layout/F120Component/F120Component';
 
 import f_120_a_01 from './../../../data/images/f_120_a/f_120_a_01.jpg';
 import f_120_a_02 from './../../../data/images/f_120_a/f_120_a_02.jpg';
@@ -58,6 +58,6 @@ const images = [
   { src: f_120_a_26, vert: false }
 ];
 
-const F_120_A = () => <F120Component images={images} />;
+const F120A = () => <F120Component images={images} />;
 
-export default F_120_A;
+export default F120A;
