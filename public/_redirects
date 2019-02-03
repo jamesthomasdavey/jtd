@@ -1,3 +1,5 @@
-/*    /index.html   200
+# Redirect default Netlify subdomain to primary domain
 https://jamesthomasdavey.netlify.com/* https://www.jamesthomasdavey.com/:splat 301!
-https://jamesthomasdavey.com/* https://www.jamesthomasdavey.com/:splat 301!
+
+# Redirect any extension to its index file
+/*    /index.html   200
