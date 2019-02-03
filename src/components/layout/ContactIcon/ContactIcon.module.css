@@ -1,8 +1,9 @@
 .wrapper {
+  margin: 0 auto;
   display: block;
   text-align: center;
   font-family: var(--main-font-stack);
-  width: 3rem;
+  width: 4.5rem;
 }
 
 .wrapper:hover {

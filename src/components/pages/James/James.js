@@ -21,7 +21,7 @@ const James = () => {
           </p>
         </div>
         <div className={classes.photo__wrapper}>
-          <ImageFadeIn src={james} alt="james" class={classes.photo} />
+          <ImageFadeIn src={james} alt="james" className={classes.photo} />
           <div className={classes.photo__cover} />
         </div>
         <div className={classes.divider} />
