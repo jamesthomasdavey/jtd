@@ -13,11 +13,10 @@ const James = () => {
       <div className={classes.container}>
         <div className={classes.description}>
           <p>
-            I took up medium format to renew my enthusiasm for photography while wearing many hats
-            in a photo agency environment. I enjoy film photos and cameras for their nostalgic hues
-            and winding mechanisms, respectively. I take pictures of nothing in particular, but
-            gravitate towards anything sentimental to me. Edgar has asked me to add that I live in
-            Mill Valley with my cat.
+            Hello, I am James. I enjoy film photos and cameras for their nostalgic hues and winding
+            mechanisms, respectively. I take pictures of nothing in particular, but gravitate
+            towards anything sentimental to me. Edgar has asked me to add that I live in Mill Valley
+            with my cat.
           </p>
         </div>
         <div className={classes.photo__wrapper}>
@@ -27,7 +26,23 @@ const James = () => {
         <div className={classes.divider} />
         <div className={classes.other}>
           <h2 className={classes.other__title}>Other Makings</h2>
-          <h2 className={classes.other__title}>Coming Soon</h2>
+          <ul className={classes.other__list}>
+            <a href="https://amzn.to/2HPbrK8" target="_blank" rel="noopener noreferrer">
+              <li className={classes.other__item}>
+                <span>Pretty Asian</span>
+              </li>
+            </a>
+            <a href="https://gallerizer.netlify.com/" target="_blank" rel="noopener noreferrer">
+              <li className={classes.other__item}>
+                <span>Gallerizer</span>
+              </li>
+            </a>
+            <a href="https://www.weirdl.it/" target="_blank" rel="noopener noreferrer">
+              <li className={classes.other__item}>
+                <span>WeirdLit</span>
+              </li>
+            </a>
+          </ul>
           <div className={classes.contact__wrapper}>
             <ContactIcon />
           </div>

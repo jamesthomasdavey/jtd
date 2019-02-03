@@ -3,7 +3,7 @@
   display: block;
   text-align: center;
   font-family: var(--main-font-stack);
-  width: 4.5rem;
+  width: 4.3rem;
 }
 
 .wrapper:hover {
@@ -19,6 +19,7 @@
   padding: 5px 18px;
   transition: all 0.3s ease-out;
   user-select: none;
+  text-align: center;
 }
 
 .envelope {
