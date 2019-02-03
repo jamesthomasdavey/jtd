@@ -13,6 +13,7 @@ import F120A from './components/pages/F120A/F120A';
 import F120B from './components/pages/F120B/F120B';
 import F135 from './components/pages/F135/F135';
 import Blog from './components/pages/Blog/Blog';
+import James from './components/pages/James/James';
 
 // css
 import classes from './App.module.css';
@@ -44,6 +45,7 @@ class App extends Component {
                 <Route exact path="/135" component={F135} />
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/blog/:page" component={Blog} />
+                <Route exact path="/james" component={James} />
               </Switch>
             </ContentWrapper>
           </div>
