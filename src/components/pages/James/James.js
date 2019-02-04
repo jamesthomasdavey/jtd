@@ -41,7 +41,7 @@ const James = () => {
         <div className={classes.other}>
           <h2 className={classes.other__title}>Other Makings</h2>
           <ul className={classes.other__list}>
-            <a href="https://amzn.to/2HPbrK8" target="_blank" rel="noopener noreferrer">
+            <a href="https://amzn.to/2GqdvFU" target="_blank" rel="noopener noreferrer">
               <li className={classes.other__item}>
                 <span>Pretty Asian</span>
               </li>
