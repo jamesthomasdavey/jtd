@@ -32,6 +32,16 @@
   text-align: justify;
 }
 
+.description__link {
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.description__link:hover {
+  color: #6088ae;
+}
+
 .photo__wrapper {
   position: relative;
   width: 100%;

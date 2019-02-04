@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageFadeIn from 'react-image-fade-in';
+import { Link } from 'react-router-dom';
 
 import ContactIcon from './../../layout/ContactIcon/ContactIcon';
 
@@ -14,10 +15,22 @@ const James = () => {
       <div className={classes.container}>
         <div className={classes.description}>
           <p>
-            Hello, I am James. I enjoy film photos and cameras for their nostalgic hues and winding
-            mechanisms, respectively. I take pictures of nothing in particular, but gravitate
-            towards anything sentimental to me. Edgar has asked me to add that I live in Mill Valley
-            with my cat.
+            Hello, my name is James. I take pictures of nothing in particular, but gravitate towards
+            anything sentimental to me. I enjoy analog photos and cameras for their nostalgic hues
+            and winding mechanisms, respectively. I can't{' '}
+            <Link className={classes.description__link} to="/blog">
+              write
+            </Link>
+            , but I like to read{' '}
+            <a
+              className={classes.description__link}
+              href="https://www.weirdl.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              weird
+            </a>
+            . Edgar has asked me to add that I live in Mill Valley with my cat.
           </p>
         </div>
         <div className={classes.photo__wrapper}>
