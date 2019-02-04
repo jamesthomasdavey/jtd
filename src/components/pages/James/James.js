@@ -40,7 +40,8 @@ const James = () => {
         <div className={classes.divider} />
         <div className={classes.other}>
           <h2 className={classes.other__title}>Other Makings</h2>
-          <ul className={classes.other__list}>
+          <h2 className={classes.other__title}>Coming Soon</h2>
+          {/* <ul className={classes.other__list}>
             <a href="https://amzn.to/2GqdvFU" target="_blank" rel="noopener noreferrer">
               <li className={classes.other__item}>
                 <span>Pretty Asian</span>
@@ -56,7 +57,7 @@ const James = () => {
                 <span>WeirdLit</span>
               </li>
             </a>
-          </ul>
+          </ul> */}
           <div className={classes.contact__wrapper}>
             <ContactIcon />
           </div>
