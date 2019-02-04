@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './components/layout/Navigation/Navigation';
 import Toolbar from './components/layout/Toolbar/Toolbar';
 import ContentWrapper from './components/layout/ContentWrapper/ContentWrapper';
+import Redirect from './components/layout/Redirect/Redirect';
 
 // pages components
 import Home from './components/pages/Home/Home';
@@ -46,6 +47,7 @@ class App extends Component {
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/blog/:page" component={Blog} />
                 <Route exact path="/james" component={James} />
+                <Route exact path="/:unknown" component={Redirect} />
               </Switch>
             </ContentWrapper>
           </div>

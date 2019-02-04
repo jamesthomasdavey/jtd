@@ -8,6 +8,7 @@ import classes from './James.module.css';
 import james from './../../../data/images/james/james.jpg';
 
 const James = () => {
+  document.title = 'James Thomas Davey | About';
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>

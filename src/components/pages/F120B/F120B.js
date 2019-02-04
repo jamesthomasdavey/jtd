@@ -58,6 +58,9 @@ const images = [
   { src: f_120_b_26, vert: true }
 ];
 
-const F120B = () => <F120Component images={images} />;
+const F120B = () => {
+  document.title = 'James Thomas Davey | 120 B';
+  return <F120Component images={images} />;
+};
 
 export default F120B;

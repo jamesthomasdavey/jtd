@@ -46,6 +46,9 @@ const images = [
   { src: f_135_20 }
 ];
 
-const F135 = () => <F135Component images={images} />;
+const F135 = () => {
+  document.title = 'James Thomas Davey | 135';
+  return <F135Component images={images} />;
+};
 
 export default F135;
