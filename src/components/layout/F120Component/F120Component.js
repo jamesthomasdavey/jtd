@@ -16,15 +16,7 @@ class F120Component extends Component {
   };
   render() {
     const photos = this.props.images.map((image, i) => {
-      return (
-        <Photo
-          src={image.src}
-          vertical={image.vert}
-          key={i}
-          index={i}
-          openLightbox={this.openLightbox}
-        />
-      );
+      return <Photo src={image} key={i} index={i} openLightbox={this.openLightbox} />;
     });
     let lightbox;
     if (this.state.lightboxIsOpen) {

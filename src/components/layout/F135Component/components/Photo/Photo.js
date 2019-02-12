@@ -22,8 +22,4 @@ Photo.propTypes = {
   openLightbox: PropTypes.func
 };
 
-Photo.defaultProps = {
-  vertical: false
-};
-
 export default Photo;
