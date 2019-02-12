@@ -28,35 +28,10 @@ import f_120_a_23 from './../../../data/images/f_120_a/f_120_a_23.jpg';
 import f_120_a_24 from './../../../data/images/f_120_a/f_120_a_24.jpg';
 import f_120_a_25 from './../../../data/images/f_120_a/f_120_a_25.jpg';
 import f_120_a_26 from './../../../data/images/f_120_a/f_120_a_26.jpg';
-
-// const images = [
-//   { src: f_120_a_01, vert: false },
-//   { src: f_120_a_02, vert: false },
-//   { src: f_120_a_03, vert: false },
-//   { src: f_120_a_04, vert: true },
-//   { src: f_120_a_05, vert: true },
-//   { src: f_120_a_06, vert: false },
-//   { src: f_120_a_07, vert: true },
-//   { src: f_120_a_08, vert: false },
-//   { src: f_120_a_09, vert: true },
-//   { src: f_120_a_10, vert: true },
-//   { src: f_120_a_11, vert: false },
-//   { src: f_120_a_12, vert: true },
-//   { src: f_120_a_13, vert: false },
-//   { src: f_120_a_14, vert: true },
-//   { src: f_120_a_15, vert: false },
-//   { src: f_120_a_16, vert: false },
-//   { src: f_120_a_17, vert: false },
-//   { src: f_120_a_18, vert: true },
-//   { src: f_120_a_19, vert: false },
-//   { src: f_120_a_20, vert: true },
-//   { src: f_120_a_21, vert: false },
-//   { src: f_120_a_22, vert: false },
-//   { src: f_120_a_23, vert: false },
-//   { src: f_120_a_24, vert: false },
-//   { src: f_120_a_25, vert: true },
-//   { src: f_120_a_26, vert: false }
-// ];
+import f_120_a_27 from './../../../data/images/f_120_a/f_120_a_27.jpg';
+import f_120_a_28 from './../../../data/images/f_120_a/f_120_a_28.jpg';
+import f_120_a_29 from './../../../data/images/f_120_a/f_120_a_29.jpg';
+import f_120_a_30 from './../../../data/images/f_120_a/f_120_a_30.jpg';
 
 const images = [
   f_120_a_01,
@@ -84,7 +59,11 @@ const images = [
   f_120_a_23,
   f_120_a_24,
   f_120_a_25,
-  f_120_a_26
+  f_120_a_26,
+  f_120_a_27,
+  f_120_a_28,
+  f_120_a_29,
+  f_120_a_30
 ];
 
 const F120A = () => {

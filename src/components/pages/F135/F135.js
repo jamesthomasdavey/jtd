@@ -22,6 +22,8 @@ import f_135_17 from './../../../data/images/f_135/f_135_17.jpg';
 import f_135_18 from './../../../data/images/f_135/f_135_18.jpg';
 import f_135_19 from './../../../data/images/f_135/f_135_19.jpg';
 import f_135_20 from './../../../data/images/f_135/f_135_20.jpg';
+import f_135_21 from './../../../data/images/f_135/f_135_21.jpg';
+import f_135_22 from './../../../data/images/f_135/f_135_22.jpg';
 
 const images = [
   f_135_01,
@@ -43,7 +45,9 @@ const images = [
   f_135_17,
   f_135_18,
   f_135_19,
-  f_135_20
+  f_135_20,
+  f_135_21,
+  f_135_22
 ];
 
 const F135 = () => {
