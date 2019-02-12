@@ -1,32 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ImageFadeIn from 'react-image-fade-in';
 
 import classes from './Photo.module.css';
 
-const isVertical = src => {
-  let img = new Image();
-  img.src = src;
-  var width = img.width;
-  var height = img.height;
-  return height > width;
-};
-
-const Photo = props => {
-  return (
-    <div
-      className={[
-        classes.wrapper,
-        props.isTransitioning ? classes.invisible : '',
-        isVertical(props.image) ? classes.vert : ''
-      ].join(' ')}
-      onClick={props.nextImageHandler}
-    >
-      <ImageFadeIn className={classes.image} src={props.image} alt={`image_${props.index}`} />
-      <div className={classes.cover} />
-    </div>
-  );
-};
+class Photo extends Component {
+  state = {
+    isVertical: false
+  };
+  updateOrientation = () => {
+    let img = new Image();
+    img.src = this.props.image;
+    if (img.height > img.width) {
+      this.setState({ isVertical: true });
+    }
+  };
+  render() {
+    return (
+      <div
+        className={[
+          classes.wrapper,
+          this.props.isTransitioning ? classes.invisible : '',
+          this.state.isVertical ? classes.vert : ''
+        ].join(' ')}
+        onClick={this.props.nextImageHandler}
+      >
+        <ImageFadeIn
+          className={classes.image}
+          src={this.props.image}
+          alt={`image_${this.props.index}`}
+          onLoad={this.updateOrientation}
+        />
+        <div className={classes.cover} />
+      </div>
+    );
+  }
+}
 
 Photo.propTypes = {
   image: PropTypes.object.isRequired,
