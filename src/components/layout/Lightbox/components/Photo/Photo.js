@@ -13,6 +13,8 @@ class Photo extends Component {
     img.src = this.props.image;
     if (img.height > img.width) {
       this.setState({ isVertical: true });
+    } else {
+      this.setState({ isVertical: false });
     }
   };
   render() {
@@ -38,7 +40,7 @@ class Photo extends Component {
 }
 
 Photo.propTypes = {
-  image: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   isTransitioning: PropTypes.bool.isRequired,
   nextImageHandler: PropTypes.func.isRequired
