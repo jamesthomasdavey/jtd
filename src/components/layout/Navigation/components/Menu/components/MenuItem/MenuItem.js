@@ -28,7 +28,9 @@ class MenuItem extends Component {
         ].join(' ')}
         onClick={this.navLinkHander}
       >
-        <span className={classes.text}>{this.props.children}</span>
+        <span title={this.props.children} className={classes.text}>
+          {this.props.children}
+        </span>
       </li>
     );
   }

@@ -18,11 +18,12 @@ const James = () => {
             Hello, my name is James. I take pictures of nothing in particular, but gravitate towards
             anything sentimental to me. I enjoy analog photos and cameras for their nostalgic hues
             and winding mechanisms, respectively. I can't{' '}
-            <Link className={classes.description__link} to="/blog">
+            <Link title="Blog" target="_self" className={classes.description__link} to="/blog">
               write
             </Link>
             , but I like to read{' '}
             <a
+              title="WeirdLit"
               className={classes.description__link}
               href="https://www.weirdl.it/"
               target="_blank"
@@ -34,7 +35,7 @@ const James = () => {
           </p>
         </div>
         <div className={classes.photo__wrapper}>
-          <ImageFadeIn src={james} alt="james" className={classes.photo} />
+          <ImageFadeIn src={james} alt="James leaning on porch railing" className={classes.photo} />
           <div className={classes.photo__cover} />
         </div>
         <div className={classes.divider} />
