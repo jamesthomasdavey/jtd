@@ -7,6 +7,9 @@ import classes from './Burger.module.css';
 const Burger = props => {
   return (
     <div
+      role="switch"
+      aria-checked={props.open}
+      aria-label="Show Navigation"
       className={[classes.wrapper, props.open ? classes.open : ''].join(' ')}
       onClick={props.toggleNav}
     >
