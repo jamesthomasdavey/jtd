@@ -42,7 +42,7 @@ class Blog extends Component {
     const pageParam = this.props.match.params.page;
     let isValidPageParam = true;
     if (pageParam) {
-      if ((Number(pageParam) - 1) * 4 > numberOfPosts) {
+      if (Number(pageParam) * 4 > numberOfPosts) {
         isValidPageParam = false;
       } else if (Number(pageParam) <= 1) {
         isValidPageParam = false;
@@ -106,7 +106,7 @@ class Blog extends Component {
       if (this.state.pageNumber === 1) {
         disableLeftArrow = true;
       }
-      if (this.state.pageNumber * 4 > this.state.posts.length) {
+      if (this.state.pageNumber * 4 + 1 > this.state.posts.length) {
         disabledRightArrow = true;
       }
       blogFooter = (
