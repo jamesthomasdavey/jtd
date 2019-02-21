@@ -21,6 +21,7 @@ class MenuItem extends Component {
   render() {
     return (
       <li
+        role="link"
         className={[
           classes.wrapper,
           this.props.small ? classes.small : '',

@@ -35,7 +35,7 @@ const James = () => {
           </p>
         </div>
         <div className={classes.photo__wrapper}>
-          <ImageFadeIn src={james} alt="James leaning on porch railing" className={classes.photo} />
+          <ImageFadeIn src={james} alt="James' bio photo" className={classes.photo} />
           <div className={classes.photo__cover} />
         </div>
         <div className={classes.divider} />

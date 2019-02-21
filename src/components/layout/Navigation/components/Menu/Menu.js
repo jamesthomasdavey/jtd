@@ -9,7 +9,7 @@ import classes from './Menu.module.css';
 
 const Menu = props => {
   return (
-    <ul className={classes.wrapper}>
+    <ul className={classes.wrapper} role="menu">
       <MenuItem
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}

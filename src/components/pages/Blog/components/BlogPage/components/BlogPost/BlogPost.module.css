@@ -60,6 +60,12 @@
   line-height: 1.6rem;
 }
 
+.content > blockquote {
+  padding-left: 2rem;
+  margin: 1rem 0;
+  line-height: 1.6rem;
+}
+
 .divider {
   width: 25%;
   height: 3px;
