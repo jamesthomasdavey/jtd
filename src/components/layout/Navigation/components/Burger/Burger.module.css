@@ -10,6 +10,8 @@
   z-index: 51;
   -webkit-transform: translateX(260px);
   transform: translateX(260px);
+  border: none;
+  background: transparent;
 }
 
 .wrapper:hover {

@@ -6,8 +6,9 @@ import classes from './Burger.module.css';
 
 const Burger = props => {
   return (
-    <div
+    <button
       role="switch"
+      tabIndex="2"
       aria-checked={props.open}
       aria-label="Show Navigation"
       className={[classes.wrapper, props.open ? classes.open : ''].join(' ')}
@@ -16,7 +17,7 @@ const Burger = props => {
       <div className={[classes.bar, classes.bar1].join(' ')} />
       <div className={[classes.bar, classes.bar2].join(' ')} />
       <div className={[classes.bar, classes.bar3].join(' ')} />
-    </div>
+    </button>
   );
 };
 

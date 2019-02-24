@@ -7,7 +7,7 @@ import classes from './Toolbar.module.css';
 const Toolbar = () => {
   return (
     <div className={classes.wrapper} role="banner">
-      <Link to="/" className={classes.logo}>
+      <Link to="/" tabIndex="1" className={classes.logo}>
         James Thomas Davey
       </Link>
     </div>
