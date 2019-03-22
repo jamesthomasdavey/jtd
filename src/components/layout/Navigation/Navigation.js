@@ -29,13 +29,14 @@ class Navigation extends Component {
     return (
       <Fragment>
         <Backdrop open={this.state.open} closeNav={this.closeNav} />
-        <nav
-          aria-hidden={!this.state.open}
-          className={[classes.wrapper, this.state.open ? classes.open : ''].join(' ')}
-        >
+        <nav className={[classes.wrapper, this.state.open ? classes.open : ''].join(' ')}>
           <Burger open={this.state.open} toggleNav={this.toggleNav} />
           <div className={classes.spacer1} />
-          <Menu closeNav={this.closeNav} pageTransitionHandler={this.props.pageTransitionHandler} />
+          <Menu
+            hidden={!this.state.open}
+            closeNav={this.closeNav}
+            pageTransitionHandler={this.props.pageTransitionHandler}
+          />
           <div className={classes.spacer2} />
         </nav>
       </Fragment>

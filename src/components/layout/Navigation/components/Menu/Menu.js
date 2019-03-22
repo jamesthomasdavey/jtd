@@ -9,11 +9,12 @@ import classes from './Menu.module.css';
 
 const Menu = props => {
   return (
-    <ul className={classes.wrapper} role="menu">
+    <ul className={classes.wrapper} aria-hidden={props.hidden} role="menu">
       <MenuItem
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}
         path="/"
+        hidden={props.hidden}
       >
         Home
       </MenuItem>
@@ -21,6 +22,7 @@ const Menu = props => {
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}
         path="/120-a"
+        hidden={props.hidden}
       >
         120 A
       </MenuItem>
@@ -28,6 +30,7 @@ const Menu = props => {
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}
         path="/120-b"
+        hidden={props.hidden}
       >
         120 B
       </MenuItem>
@@ -35,6 +38,7 @@ const Menu = props => {
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}
         path="/135"
+        hidden={props.hidden}
       >
         135
       </MenuItem>
@@ -52,6 +56,7 @@ const Menu = props => {
         closeNav={props.closeNav}
         pageTransitionHandler={props.pageTransitionHandler}
         path="/james"
+        hidden={props.hidden}
       >
         James
       </MenuItem>

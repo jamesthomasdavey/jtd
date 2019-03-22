@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.hidden {
+  outline: none;
+}
+
 .small {
   padding: 0.5rem;
 }

@@ -18,16 +18,25 @@ class MenuItem extends Component {
       }
     });
   };
+  keyHandler = e => {
+    if (e.key === 'Enter') {
+      this.navLinkHander();
+      e.target.blur();
+    }
+  };
   render() {
     return (
       <li
         role="link"
+        tabIndex={this.props.hidden ? '-1' : '0'}
         className={[
           classes.wrapper,
           this.props.small ? classes.small : '',
-          this.props.path === this.props.location.pathname ? classes.active : ''
+          this.props.path === this.props.location.pathname ? classes.active : '',
+          this.props.hidden ? classes.hidden : ''
         ].join(' ')}
         onClick={this.navLinkHander}
+        onKeyPress={this.keyHandler}
       >
         <span title={this.props.children} className={classes.text}>
           {this.props.children}
